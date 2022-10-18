@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Example RoomDB</string>
+    <style name="word_title">Titles</style>
+    <string name="hint_word">Word…</string>
+    <string name="button_save">Save</string>
+    <string name="add_word">Add word</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="hint_meaning">Meaning</string>
+    <string name="fab_edit">Fab Edit</string>
+    <string name="delete_question">Do you want to delete it?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="frag_editor">Word Editor</string>
+
+</resources>

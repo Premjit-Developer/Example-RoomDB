@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/fragHome">
+
+    <fragment
+        android:id="@+id/fragHome"
+        android:name="com.example.roomdbdemo.ui.fragments.FragHome"
+        android:label="@string/app_name"
+        tools:layout="@layout/frag_home">
+
+        <action
+            android:id="@+id/action_fragHome_to_fragDetails"
+            app:destination="@id/fragDetails" />
+
+        <action
+            android:id="@+id/action_fragHome_to_fragEditor"
+            app:destination="@id/fragEditor" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragDetails"
+        android:name="com.example.roomdbdemo.ui.fragments.FragDetails"
+        android:label="FragDetails"
+        tools:layout="@layout/frag_details">
+
+        <argument
+            android:name="word_id"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_fragDetails_to_fragEditor"
+            app:destination="@id/fragEditor" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragEditor"
+        android:name="com.example.roomdbdemo.ui.fragments.FragEditor"
+        android:label="{title}"
+        tools:layout="@layout/frag_editor">
+
+        <argument
+            android:name="title"
+            app:argType="string" />
+
+        <argument
+            android:name="word_id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+
+        <action
+            android:id="@+id/action_fragEditor_to_fragHome"
+            app:destination="@id/fragHome"
+            app:popUpTo="@id/fragHome"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+
+</navigation>
